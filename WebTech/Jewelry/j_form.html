@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jaeda's Jewelry | Feedback</title>
+    <link rel="stylesheet" href="style.css">
+    
+</head>
+<body id="formBody">
+    <form action="jewelry_home.html" target="_blank" method="POST" name="myForm" autocomplete="on">
+        <fieldset>
+            <legend>Basic Information</legend>
+
+            <label class="asterix">*</label>
+            <label>First Name: </label>
+            <input type="text" name="fname" id="fname" placeholder="Tom" required autofocus>
+            <br><br>
+
+            <label class="asterix">*</label>
+            <label>Last Name:</label>
+            <input type="text" name="lname" id="lname" placeholder="Holland" required>
+            <br><br>
+
+            <label class="asterix">*</label>
+            <label>Age:</label>
+            <input type="number" name="age" id="age" min="18" max="99" value="18" required>
+            <br><br>
+
+            <label class="asterix">*</label>
+            <label>D.O.B:</label>
+            <input type="date" max="2003-01-01" value="2003-01-01" width="20px" required>
+            <br><br>
+
+            <label class="asterix">*</label>
+            <label>Gender:</label>
+            <input type="radio" name="gender" value="male" checked>
+            <label>Male</label>
+            <input type="radio" name="gender" value="female">
+            <label>Female</label>
+            <br><br>
+
+            <label class="asterix">*</label>
+            <label>Recently viewed product</label>
+            <select name="recentprod" required>
+                <option value="Stones">Stones</option>
+                <option value="Rings">Rings</option>
+                <option value="Necklace">Necklace</option>
+            </select>
+            <br><br>
+
+            <label class="asterix">*</label>
+            <label>Email:</label>
+            <input type="email" name="email" id="email" placeholder="wowz@gmail.com" required autocomplete="off">
+            <br><br>
+
+            <label class="asterix">*</label>
+            <label>Username:</label>
+            <input type="text" name="uname" id="uname" required>
+            <br><br>
+
+            <label class="asterix">*</label>
+            <label>Password:</label>
+            <input type="password" name="pw" id="pw" required>
+            <br><br>
+
+            <label class="asterix">*</label>
+            <label>Account Expiry:</label>
+            <input type="date" min="2021-06-13" required>
+
+        </fieldset>
+
+        <br>
+        <fieldset>
+            <legend>Advanced Information</legend>
+
+            <label>Upload Photo:</label>
+            <input type="file" name="fileupload">
+            <br><br>
+
+            <label>Personal Website:</label>
+            <input type="url" name="website" id="website" placeholder="https://stackoverflow.com/">
+            <br><br>
+
+            <label>Favourite Color:</label>
+            <input type="color" name="favcolor" id="favcolor">
+            <br><br>
+
+            <label>How did you get to know about the website:</label><br>
+            <input type="checkbox" name="Family" value="Family">
+            <label>Family/Friends</label>
+            <input type="checkbox" name="Social" value="Social">
+            <label>Social Media</label>
+            <input type="checkbox" name="Advertisements" value="Advertisements">
+            <label>Advertisements</label>
+            <input type="checkbox" name="Others" value="Others">
+            <label>Others</label>
+            <br><br>
+
+            <label>Rate Jaeda's Jewelry Website:</label>
+            <input type="range" min="1" max="5">
+            <br><br>
+
+            <label>Additional Feedback:</label><br>
+            <textarea rows="5" cols="50"></textarea>
+
+        </fieldset>
+
+        <div id="buttons">
+            <a href="jewelry_home.html"><input type="button" name="back" value="Back"></a> | <input type="submit" name="submit"> | <input type="reset" name="reset">
+        </div>
+
+    </form>
+</body>
+</html>

@@ -1,0 +1,38 @@
+body{
+    text-align: center;
+    font-family: century gothic;
+    line-height: 2;
+    background-color: mintcream;
+}
+hr{
+    background-color: lightslategray;
+    border: 1px solid lightslategray;
+    margin: 30px auto;
+    width: 75%;
+}
+h1{
+    font-size: 60px;
+    text-transform: uppercase;
+}
+h2{
+    font-size: 40px;
+}
+img{
+    height: 200px;
+    width: auto;
+    transition: transform 1s;
+}
+img:hover{
+    transform: scale(2);
+}
+li{
+    list-style: none;
+}
+a{
+    text-decoration: none;
+    color: lightcoral;
+}
+a:hover{
+    font-weight: bold;
+    color: lightcoral;
+}

@@ -1,0 +1,133 @@
+/* Common */
+body{
+    background-color: #C1CDCA;
+    font-family: century gothic;
+    line-height: 2;
+    margin: 0;
+}
+h2, table tr th{
+    padding: 5px;
+    background-color: #65837B;
+    color: #C1CDCA;
+    text-align: center;
+}
+h3{
+    color: #445852;
+}
+#sidenav{
+    padding: 25px;
+    width: 15%;
+    border-right: 2px solid #65837B;
+}
+#content{
+    padding: 25px;
+    width: 80%;
+}
+a, nav a{
+    color: #445852;
+    text-decoration: none;
+    font-weight: bold;
+}
+a:hover, nav .active{
+    color: #83656D;
+    background-color: transparent;
+    padding: 0;
+}
+nav a:hover{
+    background-color: #83656D;
+    color: #efefef;
+    padding: 10px 20px;
+}
+abbr{
+    text-decoration: none;
+    color: #83656D;
+}
+header, footer{
+    background-color: #65837B;
+    color: #efefef;
+    height: 75px;
+    padding: 20px;
+}
+hr{
+    display: block;
+    margin: 25px 10px;
+}
+.flex{
+    display: flex;
+}
+.center{
+    text-align: center;
+}
+
+/* Home */
+table tr th, table tr td{
+    border: 1px solid #65837B;
+}
+
+tr:last-child{
+    background-color: #65837B;
+    color: #efefef;
+}
+table img{
+    border-radius: 100px;
+    width: 200px;
+}
+
+#home #sidenav,#home #content{
+    vertical-align: baseline;
+}
+dt{
+    font-weight: bold;
+}
+
+/* qualifications */
+#qualifications #content img{
+    height: 200px;
+}
+
+/* workexperience */
+
+
+/* skills */
+#skills .flex{
+    justify-content: space-around;
+}
+#skills fieldset, legend{
+    border: 2px solid #83656D;
+}
+#skills legend{
+    padding: 5px;
+    font-weight: bold;
+}
+#skills #right{
+    width: 20%;
+}
+
+/* competencies */
+
+
+/* accomplishments */
+#accomplishments #content img{
+    height: 200px;
+}
+
+/* personalinfo */
+#personalinfo #content img{
+    height: 400px;
+}
+
+/* languages */
+/* hobbies */
+#hobbies #content div{
+    justify-content: space-around;
+}
+#hobbies #content img{
+    height: 200px;
+}
+
+/* contact */
+
+/* to fill page - temp */
+#languages #content, #accomplishments #content, #competencies #content{
+    height: 387px;
+}

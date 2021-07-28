@@ -1,0 +1,76 @@
+/* General */
+body{
+    font-family: century gothic;
+    font-size: 20px;
+    text-align: center;
+    line-height: 2;
+}
+#grid-container{
+    background-color: #9C5A54;
+    display: grid;
+    grid-template-columns: 33% 33% 33%; /* 3 columns */
+    padding: 20px;
+    gap: 5px;
+}
+.grid-item{
+    background-color: #f5ebeb;
+    padding: 25px;
+}
+
+#header, #footer{
+    grid-column: 1 / 4;
+    /* grid-column-start / grid-column-end 
+    start on column 1 and end before column 4, on column 3*/
+}
+
+#HTMLprice, #CSSprice, #JSprice, #footer{
+    text-align: left;
+}
+
+/* Row 2 - links */
+a{
+    text-decoration: none;
+    color: #6883A5;
+    font-weight: bold;
+}
+a:hover{
+    background-color: #fad8c0;
+    padding: 5px;
+    border-radius: 10px;
+}
+
+/* Row 3 - main content */
+#content{
+    grid-area: 3 / 1 / span 2 / span 3;
+    /* grid-row-start / grid-column-start / grid-row-end / grid-column-end 
+    start on row 3 and column 1, and span 2 rows and 3 columns*/
+}
+#content span{
+    font-weight: bold;
+    font-size: larger;
+}
+
+/* Row 4 and 5 - contents */
+#HTMLimg, #CSSimg{
+    position: relative;
+}
+img{
+    height: 250px;
+    position: absolute;
+    top: 0; right: 0; bottom: 0; left: 0;
+    margin: auto;
+}
+#HTMLcontent{
+    grid-column: 1 / span 2;
+    text-align: justify;
+}
+#CSScontent{
+    grid-column: 2 / span 2;
+    text-align: left;
+}
+
+/* Row 6 */
+h4{
+    text-align: center;
+    margin: 0;
+}
