@@ -1,0 +1,7 @@
+CREATE TABLE user (id int NOT NULL AUTO_INCREMENT, name varchar(255) NOT NULL, email varchar(255) NOT NULL, username varchar(255) NOT NULL, password varchar(255) NOT NULL, account varchar(255) NOT NULL, balance float, PRIMARY KEY(id));
+
+// to set id after delete
+ALTER TABLE user AUTO_INCREMENT=1;
+
+// delete test
+DELETE FROM user WHERE name = "test";
