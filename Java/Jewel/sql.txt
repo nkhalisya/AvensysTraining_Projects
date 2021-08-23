@@ -1,0 +1,43 @@
+// user table
+CREATE TABLE user (id int NOT NULL AUTO_INCREMENT, name varchar(255) NOT NULL, email varchar(255) NOT NULL, username varchar(255) NOT NULL, password varchar(255) NOT NULL, cardno varchar(255) NOT NULL,cardtype varchar(255) NOT NULL, role varchar(255) default 'member', PRIMARY KEY(id));
+
+// product table
+CREATE TABLE product(id int NOT NULL AUTO_INCREMENT, name varchar(255) NOT NULL, img varchar(255) NOT NULL, type varchar(255) NOT NULL, price float NOT NULL, PRIMARY KEY(id));
+
+// cart table
+CREATE TABLE cart( id int NOT NULL AUTO_INCREMENT, user_id int, product_id int, qty int, PRIMARY KEY(id), FOREIGN KEY(user_id) REFERENCES user(id), FOREIGN KEY(product_id) REFERENCES product(id));
+
+// checkout table
+CREATE TABLE checkout( id int NOT NULL AUTO_INCREMENT, user_id int, total float, date timestamp NOT NULL, PRIMARY KEY(id), FOREIGN KEY(user_id) REFERENCES user(id));
+
+// checkoutDetails table
+CREATE TABLE checkoutDetail( checkout_id int, user_id int, product_id int, qty int, price float, date timestamp NOT NULL, FOREIGN KEY(checkout_id) REFERENCES checkout(id), FOREIGN KEY(user_id) REFERENCES user(id), FOREIGN KEY(product_id) REFERENCES product(id) ); 
+
+// to set id after delete
+ALTER TABLE user AUTO_INCREMENT=1;
+
+// delete test
+DELETE FROM user WHERE name = "test";
+DELETE FROM checkoutDetail;
+DELETE FROM checkout;
+
+// default admin
+insert into user values ("admin", "<valid email>", "admin", "admin", "111-111-1", "Visa", "admin")
+
+WHAT:
+1. Admin: 
+1.1 Can manage users - update, delete
+1.2 Can manage products - add, update, delete
+
+2. User:
+2.1 Register account - insert
+2.2 Login
+2.3 Forget password [email required]
+2.4 Edit profile details, password
+2.5 Cart - add, update, delete
+
+FLOW:
+From Cart page: Cart items -> CHECKOUT -> 
+Creates checkout table - insert userid, total -> CONFIRM ->
+Insert into checkoutDetails (FROM CART TABLE), insert date to checkout table,
+Finally, truncate Cart table for next user.

@@ -1,0 +1,163 @@
+@charset "ISO-8859-1";
+
+body{
+    background-color: #eeebe8;
+    font-family: century gothic;
+    line-height: 2;
+    max-width: 1440px;
+    margin: auto;
+    padding: 20px;
+}
+hr{
+    background-color: #754847;
+    border: 0.5px solid #754847;
+    margin: 30px 0;
+}
+header{
+	margin-bottom: 40px;
+}
+#logo h1{
+	color: #754847;
+    font-family: pristina;
+    letter-spacing: 2px;
+    font-size: 50px;
+    text-shadow: 1px 3px 5px rgb(207, 102, 91);
+}
+h1, h2{
+    color: #754847;
+    font-weight: 500;
+    text-shadow: 1px 3px 5px rgb(94, 165, 165);
+}
+nav{
+	background-color: #eeebe8;
+	border-top: 1.5px solid #754847;
+	border-bottom: 1.5px solid #754847;
+}
+.nav-link:hover, #buttons a:hover{
+    color: salmon !important;
+    background-color:#754847;
+    border-radius: 5px;
+}
+.active{
+	color: salmon !important;
+	font-weight: bold;
+	background-color: #eeebe8;
+}
+.navbar-brand{
+	color: #754847 !important;
+	font-family: pristina;
+	text-shadow: 1px 3px 5px rgb(207, 102, 91);
+}
+a{
+    text-decoration: none;
+    color: #754847;
+}
+a:hover{
+    color: salmon;
+}
+#button{
+    border: 1px solid #754847;
+    font-weight: bold;
+    background-color: #754847;
+    color: #eeebe8;
+    padding: 5px 20px;
+    margin: 10px;
+    border-radius: 5px;
+}
+#button:hover{
+    background-color: #eeebe8;
+    color: #754847;
+    border: 1px solid #754847;
+}
+.alert{
+	width: fit-content;
+	margin: 0 auto;
+	top: 100px;
+	left: 0;
+	right: 0;
+	z-index: 1;
+}
+.bi{
+	font-size: 20px;
+}
+
+
+/* IMAGES */
+#logo{
+	height: 200px;
+}
+#banner{
+	width: 100%;
+	margin-top: 40px;
+}
+.catImg img{
+	height: 300px;
+    width: 200px;
+}
+.images img{
+	height: 200px;
+    width: 200px;
+}
+.zoom {
+  margin: 50px 50px 25px 50px;
+  transition: transform .2s; /* Animation */
+}
+.zoom:hover {
+  transform: scale(1.2);
+}
+
+/* FOOTER */
+footer{
+    background-color: #754847;
+    font-size: small;
+    color: whitesmoke;
+    padding: 25px;
+    border-top: 4px ridge salmon;
+    margin-top: 50px;
+}
+footer a{
+	color: inherit;
+}
+footer ul{
+	list-style-type: none;
+	padding-left: 0;
+}
+footer b{
+	margin-bottom: 10px;
+}
+/* LOGIN */
+
+
+/* HOME */
+blockquote{
+    font-size: 40px;
+    font-weight: bold;
+    font-family: gabriola;
+    background-color: salmon;
+    color: #eeebe8;
+    outline: 10px dotted darkslategray;
+    outline-offset: 2px;
+}
+blockquote u{
+    color: darkslategray;
+}
+
+
+/* PRODUCTS */
+
+/* PROFILE */
+
+table{
+	margin: 40px auto;
+}
+table tr td{
+	padding: 10px;
+}
+
+#changePassword{
+	visibility: hidden;
+	border: 2px solid  #754847;
+	border-radius: 5px;
+	padding: 10px;
+	margin: 10px auto;
+}

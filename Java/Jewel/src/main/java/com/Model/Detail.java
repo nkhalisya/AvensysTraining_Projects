@@ -1,0 +1,69 @@
+package com.Model;
+
+public class Detail {
+	public int checkoutid;
+	public int userid;
+	public int productid;
+	public int qty;
+	public double price;
+	public String datetime;
+	
+	public String type;
+	public String img;
+	public String name;
+	
+	public int getCheckoutid() {
+		return checkoutid;
+	}
+	public void setCheckoutid(int checkoutid) {
+		this.checkoutid = checkoutid;
+	}
+	public int getUserid() {
+		return userid;
+	}
+	public void setUserid(int userid) {
+		this.userid = userid;
+	}
+	public int getProductid() {
+		return productid;
+	}
+	public void setProductid(int productid) {
+		this.productid = productid;
+	}
+	public int getQty() {
+		return qty;
+	}
+	public void setQty(int qty) {
+		this.qty = qty;
+	}
+	public double getPrice() {
+		return price;
+	}
+	public void setPrice(double price) {
+		this.price = price;
+	}
+	public String getDatetime() {
+		return datetime;
+	}
+	public void setDatetime(String datetime) {
+		this.datetime = datetime;
+	}
+	public String getType() {
+		return type;
+	}
+	public void setType(String type) {
+		this.type = type;
+	}
+	public String getImg() {
+		return img;
+	}
+	public void setImg(String img) {
+		this.img = img;
+	}
+	public String getName() {
+		return name;
+	}
+	public void setName(String name) {
+		this.name = name;
+	}
+}
