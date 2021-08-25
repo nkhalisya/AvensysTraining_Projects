@@ -1,0 +1,112 @@
+<h1 class="ps-5 pb-3">List of Books</h1>
+<!-- Button trigger modal -->
+<button type="button" class="btn btn-primary ms-5 mb-3" data-bs-toggle="modal" data-bs-target="#exampleModal">
+    Add Book
+</button>
+<div class="alert alert-danger ms-5" role="alert" *ngIf="">
+    {{msg}}
+</div>
+<table class="ms-5 mt-3" *ngIf="books.length > 0">
+    <tr>
+        <th scope="col">S/N</th>
+        <th scope="col">ISBN</th>
+        <th scope="col">Title</th>
+        <th scope="col">Authors</th>
+        <th scope="col">Year</th>
+        <th scope="col">Price</th>
+    </tr>
+    <tr *ngFor="let book of books; let i = index">
+        <th scope="row">{{i+1}}</th>
+        <td>
+            <input type="number" class="form-control" id="isbn_{{book.isbn}}" name="isbn" disabled [(ngModel)]="book.isbn" min="10000000" max="99999999" maxlength="8">
+        </td>
+        <td>
+            <input type="text" class="form-control" id="title_{{book.isbn}}" name="title" disabled [(ngModel)]="book.title" maxlength="100">
+        </td>
+        <td>
+            <input type="text" class="form-control" id="author_{{book.isbn}}" name="authors" disabled [(ngModel)]="book.authors">
+        </td>
+        <td>
+            <input type="number" class="form-control" id="year_{{book.isbn}}" name="year" disabled [(ngModel)]="book.year" min="1960" max="3000" maxlength="4">
+        </td>
+        <td>
+            <input type="text" class="form-control" id="price_{{book.isbn}}" name="price" disabled [(ngModel)]="book.price" maxlength="4">
+        </td>
+        <td id="update{{book.isbn}}" style="display: none;">
+            <button type="button" class="btn btn-primary" [disabled]="validateUpdateForm(book.isbn)" (click)="updateBook(book.isbn)">
+                Update
+            </button>
+        </td>
+        <td id="cancel{{book.isbn}}" style="display: none;">
+            <a (click)="cancelEdit(book.isbn)">
+                <i class="bi bi-x-circle-fill align-middle"></i>
+            </a>
+        </td>
+        <td id="edit{{book.isbn}}">
+            <a (click)="editBook(book.isbn)">
+                <i class="bi bi-pencil-square align-middle"></i>
+            </a>
+        </td>
+        <td id="delete{{book.isbn}}">
+            <a (click)="deleteBook(book.isbn)">
+                <i class="bi bi-trash-fill align-middle"></i>
+            </a>
+        </td>
+    </tr>
+</table>
+
+<!-- Modal -->
+<div #modal class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+
+            <form (ngSubmit)="addBook()">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Create Book</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+
+                <div class="modal-body">
+                    <div class="alert alert-danger" role="alert" *ngIf="checkForm()">
+                        {{msg}}
+                    </div>
+
+                    <div class="form-group">
+                        ISBN:
+                        <input type="number" name="isbn" class="form-control" [(ngModel)]="addBk.isbn" required min="10000000" max="99999999" maxlength="8">
+                    </div>
+
+                    <br>
+                    <div class="form-group">
+                        Title:
+                        <input type="text" name="title" class="form-control" [(ngModel)]="addBk.title" required maxlength="100">
+                    </div>
+
+                    <br>
+                    <div class="form-group">
+                        Authors: <small>*Enter comma for multiple authors (no spaces after comma)</small>
+                        <input type="text" name="authors" class="form-control" [(ngModel)]="addBk.authors" required>
+                    </div>
+
+                    <br>
+                    <div class="form-group">
+                        Year:
+                        <input type="number" name="year" class="form-control" [(ngModel)]="addBk.year" required maxlength="4" min="1960" max="3000">
+                    </div>
+
+                    <br>
+                    <div class="form-group">
+                        Price:
+                        <input type="text" name="price" class="form-control" [(ngModel)]="addBk.price" required maxlength="4">
+                    </div>
+                </div>
+                
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    <button type="submit" class="btn btn-primary" [disabled]="validateAddForm()">Add</button>
+                </div>
+            </form>
+
+        </div>
+    </div>
+</div>

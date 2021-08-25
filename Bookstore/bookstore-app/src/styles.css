@@ -1,0 +1,37 @@
+/* You can add global styles to this file, and also import other style files */
+body{
+    background-color: #C1B0A6 !important;
+}
+h1, .navbar-brand{
+    font-family: 'IM Fell English SC', serif;
+}
+nav, footer{
+    background-color: #1C0803;
+}
+nav a, footer{
+    color: #C1B0A6 !important;
+}
+table tr th, table tr td{
+    padding: 10px;
+}
+table tr:first-child{
+    border-bottom: 1px dashed #1C0803;
+}
+.btn{
+    background-color: #875F59 !important;
+    border: #875F59 !important;
+}
+.btn:hover{
+    background-color: #E4E9EC !important;
+    color: #9c827e !important;
+}
+
+a i{
+    font-size: 25px;
+    color: #875F59 ;
+}
+a i:hover{
+    color: #E4E9EC ;
+}
+
+/* https://www.canva.com/colors/color-palettes/clean-wood/ */
